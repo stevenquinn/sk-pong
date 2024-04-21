@@ -19,18 +19,11 @@ class GameViewController: UIViewController {
         // Present the scene
         let skView = self.view as! SKView
         skView.presentScene(scene)
-        
         skView.ignoresSiblingOrder = true
-        skView.showsFPS = true
-        skView.showsNodeCount = true
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
+        return .landscape
     }
 
     override var prefersStatusBarHidden: Bool {
